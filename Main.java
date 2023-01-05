@@ -3,13 +3,28 @@ public class Main {
     public static void main(String[] args) {
 
         Person anna = new Person("Anna");
+        Person andrey = new Person("Andrey");
         Cat barsik = new Cat("Barsik", "Anna");
+        Dog tuzik = new Dog("Tuzik", "Andrey");
+        Fish fish = new Fish("Anna");
         anna.setVoice("kis-kis-kis");
-        System.out.println(new Action().callTheCat(anna, barsik));
-        barsik.setVoice("mur-mur-mur");
-        System.out.println(new Action().petTheCat(anna, barsik));
-        barsik.setVoice("mau-mau-mau");
-        System.out.println(new Action().feedTheCat(anna, barsik));
+        barsik.callPet(anna);
+        barsik.setPetVoice("myau-myau");
+        barsik.petCallingPerson(anna);
+        barsik.eat();
+        barsik.setPetVoice("mur-mur-mur");
+        barsik.petCallingPerson(anna);
+        anna.setVoice("Ко мне!");
+        andrey.setVoice("Ко мне!");
+        tuzik.callPet(anna);
+        tuzik.callPet(andrey);
+        tuzik.setPetVoice("gav-gav-gav");
+        tuzik.petCallingPerson(andrey);
+        tuzik.eat();
+        tuzik.setPetVoice("ppp-gav");
+        tuzik.petCallingPerson(andrey);
+        fish.swimming();
+        fish.eat();
 
     }
 
