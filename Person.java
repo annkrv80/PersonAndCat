@@ -24,4 +24,12 @@ public class Person {
 
         return this.name;
     }
+
+    public void feeding() {
+        System.out.println(this.name + " кормит питомца!");
+    }
+
+    public void pet() {
+        System.out.println(this.name + " гладит питомца!");
+    }
 }
