@@ -1,5 +1,6 @@
-public abstract class Pets {
+public abstract class Pets implements Comparable<Pets>{
     protected String petOwner;
+    protected int petAge;
 
     public String getPetOwner() {
         return petOwner;
@@ -9,5 +10,16 @@ public abstract class Pets {
         this.petOwner = petOwner;
     }
 
+   public int getPetAge() {
+       return petAge;
+   }
+
     abstract void eat();
-}
+
+    @Override
+    public int compareTo(Pets o) {
+        
+        return this.petAge-o.petAge;
+    }
+    
+}    
