@@ -2,9 +2,10 @@ public class Cat extends Pets implements PetCallingPerson {
     private String petName;
     private String petVoice;
 
-    public Cat(String petName, String petOwner) {
+    public Cat(String petName,int petAge, String petOwner) {
         this.petName = petName;
         this.petOwner = petOwner;
+        this.petAge=petAge;
     }
 
     public String getPetName() {
