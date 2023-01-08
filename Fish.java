@@ -1,7 +1,8 @@
 public class Fish extends Pets implements Swim {
 
-    public Fish(String petOwent) {
+    public Fish(int petAge, String petOwent) {
         this.petOwner = petOwent;
+        this.petAge=petAge;
     }
 
     @Override
