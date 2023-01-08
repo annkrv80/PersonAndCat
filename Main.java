@@ -1,12 +1,15 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Main {
 
     public static void main(String[] args) {
 
         Person anna = new Person("Anna");
         Person andrey = new Person("Andrey");
-        Cat barsik = new Cat("Barsik", "Anna");
-        Dog tuzik = new Dog("Tuzik", "Andrey");
-        Fish fish = new Fish("Anna");
+        Cat barsik = new Cat("Barsik",8, "Anna");
+        Dog tuzik = new Dog("Tuzik",5, "Andrey");
+        Fish fish = new Fish(1,"Anna");
         anna.setVoice("kis-kis-kis");
         barsik.callPet(anna);
         barsik.setPetVoice("myau-myau");
@@ -26,6 +29,18 @@ public class Main {
         fish.swimming();
         fish.eat();
 
+        ArrayList<Pets> pets=new ArrayList<>();
+        pets.add(tuzik);
+        pets.add(barsik);
+        pets.add(fish);
+        Collections.sort(pets, new PetsAge());
+        System.out.println(pets);
+
+        if(tuzik.compareTo(barsik)>0){
+            System.out.println(tuzik + "  старше  " + barsik);
+        }else{
+            System.out.println(barsik + "  старше  " + tuzik);
+        }
     }
 
 }
