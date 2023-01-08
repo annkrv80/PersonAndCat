@@ -2,9 +2,10 @@ public class Dog extends Pets implements PetCallingPerson {
     private String petName;
     private String petVoice;
 
-    public Dog(String petName, String petOwner) {
+    public Dog(String petName,int petAge, String petOwner) {
         this.petName = petName;
         this.petOwner = petOwner;
+        this.petAge=petAge;
 
     }
 
